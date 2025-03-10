@@ -1,0 +1,27 @@
+version: "3.8"
+services:
+  mongo:
+    image: mongo
+    container_name: mi_mongo
+    restart: always
+    environment:
+      MONGO_INITDB_DATABASE: mi_base_de_datos
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: password
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+  seed:
+    build: .
+    container_name: seed_data
+    depends_on:
+      - mongo
+    environment:
+      MONGO_URI: mongodb://mongo:27017/mi_base_de_datos
+    command: ["node", "src/database/seed.js"]
+
+volumes:
+  mongo_data:
+

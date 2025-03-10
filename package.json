@@ -1,0 +1,32 @@
+{
+  "name": "api-empresas",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/csena72/api-empresas.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/csena72/api-empresas/issues"
+  },
+  "homepage": "https://github.com/csena72/api-empresas#readme",
+  "dependencies": {
+    "@faker-js/faker": "^9.6.0",
+    "dotenv": "^16.4.7",
+    "mongodb": "^6.14.2"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "mongodb-memory-server": "^10.1.4",
+    "supertest": "^7.0.0"
+  }
+}
