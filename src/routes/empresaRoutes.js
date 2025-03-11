@@ -5,7 +5,7 @@ function empresaRoutes(req, res, db) {
 
     // Trae las empresas que hicieron transferencias el último mes
     if (req.url === "/empresas/transferencias-recientes" && req.method === "GET") {
-        return empresaController.obtenerEmpresasTransferencias(req, res, db);
+        return empresaController.obtenerTransferenciasRecientes(req, res, db);
     }
     
     // Trae las empresas que hicieron adhesion el último mes

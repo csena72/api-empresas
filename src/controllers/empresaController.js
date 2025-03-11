@@ -1,6 +1,6 @@
 import * as empresaService from "../services/empresaService.js";
 
-async function obtenerEmpresasTransferencias(req, res, db) {
+async function obtenerTransferenciasRecientes(req, res, db) {
     try {
         const empresas = await empresaService.getTransferenciasRecientes(db);
         res.writeHead(200, { "Content-Type": "application/json" });
@@ -38,4 +38,4 @@ async function adherirEmpresa(req, res, db) {
     });
 }
 
-export { obtenerEmpresasTransferencias, obtenerEmpresasAdhesion, adherirEmpresa };
+export { obtenerTransferenciasRecientes, obtenerEmpresasAdhesion, adherirEmpresa };
