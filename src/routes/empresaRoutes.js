@@ -2,14 +2,18 @@
 import * as empresaController from "../controllers/empresaController.js";
 
 function empresaRoutes(req, res, db) {
-    if (req.url === "/empresas/transferencias" && req.method === "GET") {
+
+    // Trae las empresas que hicieron transferencias el último mes
+    if (req.url === "/empresas/transferencias-recientes" && req.method === "GET") {
         return empresaController.obtenerEmpresasTransferencias(req, res, db);
     }
     
-    if (req.url === "/empresas/adhesion" && req.method === "GET") {
+    // Trae las empresas que hicieron adhesion el último mes
+    if (req.url === "/empresas/adhesiones-recientes" && req.method === "GET") {
         return empresaController.obtenerEmpresasAdhesion(req, res, db);
     }
 
+    // Adherir empresa
     if (req.url === "/empresas/adhesion" && req.method === "POST") {
         return empresaController.adherirEmpresa(req, res, db);
     }

@@ -19,7 +19,7 @@ services:
     depends_on:
       - mongo
     environment:
-      MONGO_URI: mongodb://mongo:27017/mi_base_de_datos
+      MONGO_URI: mongodb://admin:password@mongo:27017/mi_base_de_datos?authSource=admin
     command: ["node", "src/database/seed.js"]
 
 volumes:

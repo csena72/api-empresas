@@ -1,9 +1,8 @@
 import * as empresaService from "../services/empresaService.js";
 
 async function obtenerEmpresasTransferencias(req, res, db) {
-    console.log(req);
     try {
-        const empresas = await empresaService.getEmpresasTransferencias(db);
+        const empresas = await empresaService.getTransferenciasRecientes(db);
         res.writeHead(200, { "Content-Type": "application/json" });
         res.end(JSON.stringify(empresas));
     } catch (error) {

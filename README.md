@@ -114,7 +114,8 @@ Content-Type: application/json
 ```json
 {
   "CUIT": "11122233344",
-  "RazonSocial": "Nueva Empresa"
+  "RazonSocial": "Nueva Empresa",
+  "FechaAdhesion": "2022-05-15"
 }
 ```
 📌 **Ejemplo de Respuesta:**
