@@ -88,6 +88,11 @@ use mi_base_de_datos
 db.empresas.find().pretty()
 db.transferencias.find().pretty()
 ```
+### 3️⃣ **Correr el servidor**
+
+```sh
+npm start
+```
 
 ---
 
